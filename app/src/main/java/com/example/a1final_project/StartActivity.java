@@ -18,8 +18,16 @@ public class StartActivity extends AppCompatActivity {
         //making button visible
         start.setVisibility(View.VISIBLE);
         //switches from StartActivity to CalculateActivity
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StartActivity.this.startActivity(new Intent(StartActivity.this, CalculateActivity.class));
+            }
+        });
         startActivity(new Intent(this, CalculateActivity.class));
         start.setVisibility(View.GONE);
+
+
         finish();
     }
 }
