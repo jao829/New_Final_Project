@@ -15,8 +15,15 @@ public class RestartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_restart);
         Button restart = findViewById(R.id.restart);
         restart.setVisibility(View.VISIBLE);
-        startActivity(new Intent(this, StartActivity.class));
-        restart.setVisibility(View.GONE);
-        finish();
+        Intent intent = getIntent();
+        int x = intent.getIntExtra("goalPace", 0);
+        restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RestartActivity.this, StartActivity.class));
+                finish();
+            }
+        });
+        //startActivity(new Intent(this, StartActivity.class));
     }
 }

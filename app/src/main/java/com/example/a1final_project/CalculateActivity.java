@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class CalculateActivity extends AppCompatActivity {
@@ -18,5 +19,16 @@ public class CalculateActivity extends AppCompatActivity {
         Button calculate = findViewById(R.id.calculate);
         findViewById(R.id.goal).setVisibility(View.VISIBLE);
         calculate.setVisibility(View.VISIBLE);
+        final EditText goal = findViewById(R.id.goal);
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int goalpace = Integer.parseInt(goal.getText().toString());
+                Intent intent = new Intent(CalculateActivity.this, RestartActivity.class);
+                intent.putExtra("goalPace", goalpace);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

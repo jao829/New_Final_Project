@@ -36,7 +36,6 @@
         android:ems="10"
         android:hint="DISTANCE"
         android:inputType="numberDecimal"
-        android:text="DISTANCE"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
