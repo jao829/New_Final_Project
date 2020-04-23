@@ -16,12 +16,13 @@
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:ems="10"
-        android:hint="TIME"
+        android:hint="TIME (MIN)"
         android:inputType="time"
+        android:text="TIME (MIN)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/distance"
-        tools:text="TIME"
+        tools:text="TIME (MIN)"
         tools:visibility="visible" />
 
     <EditText
@@ -34,34 +35,14 @@
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:ems="10"
-        android:hint="DISTANCE"
+        android:hint="DISTANCE (MILES)"
         android:inputType="numberDecimal"
+        android:text="DISTANCE (MILES)"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goal"
-        tools:text="DISTANCE"
-        tools:visibility="visible" />
-
-    <EditText
-        android:id="@+id/goal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginRight="99dp"
-        android:ems="10"
-        android:hint="GOAL PACE"
-        android:inputType="numberDecimal"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148"
-        tools:text="GOAL PACE"
+        tools:text="DISTANCE (MILES)"
         tools:visibility="visible" />
 
     <Button
@@ -77,4 +58,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.762"
         tools:text="CALCULATE" />
+
+    <EditText
+        android:id="@+id/goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="85dp"
+        android:ems="10"
+        android:hint="GOAL PACE (MIN)"
+        android:inputType="time"
+        android:text="GOAL PACE"
+        app:layout_constraintBottom_toTopOf="@+id/distance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="GOAL PACE (MIN)" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
