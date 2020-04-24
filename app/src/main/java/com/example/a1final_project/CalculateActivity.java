@@ -38,6 +38,5 @@ public class CalculateActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }
