@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.autofill.AutofillValue;
 import android.widget.Button;
 
 public class RestartActivity extends AppCompatActivity {
@@ -16,7 +17,12 @@ public class RestartActivity extends AppCompatActivity {
         Button restart = findViewById(R.id.restart);
         restart.setVisibility(View.VISIBLE);
         Intent intent = getIntent();
-        int x = intent.getIntExtra("goalPace", 0);
+        //in minutes and miles
+        double goal = intent.getDoubleExtra("goalPace", 0);
+        double distance = intent.getDoubleExtra("distance", 0);
+        double time = intent.getDoubleExtra("time", 0);
+        //user pace as a double (need to convert into time)
+        double userPace = time / distance;
         restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
