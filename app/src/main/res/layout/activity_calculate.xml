@@ -81,4 +81,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="GOAL PACE (MIN)" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="616dp"
+        android:layout_height="754dp"
+        app:srcCompat="@drawable/bc"
+        tools:layout_editor_absoluteX="-119dp"
+        tools:layout_editor_absoluteY="307dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

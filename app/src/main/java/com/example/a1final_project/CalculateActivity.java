@@ -30,11 +30,11 @@ public class CalculateActivity extends AppCompatActivity {
                 Intent intent = new Intent(CalculateActivity.this, RestartActivity.class);
                 intent.putExtra("goalPace", goalpace);
                 startActivity(intent);
-                if (goalpace > distance divided by time) {
-                    booing.start();
-                } else {
-                    cheering.start();
-                }
+//                if (goalpace > distance divided by time) {
+//                    booing.start();
+//                } else {
+//                    cheering.start();
+//                }
                 finish();
             }
         });
