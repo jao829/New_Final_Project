@@ -53,8 +53,8 @@
         android:layout_height="1264dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456"
+        app:layout_constraintVertical_bias="0.425"
         app:srcCompat="@drawable/b"
-        tools:layout_editor_absoluteX="-165dp" />
+        tools:layout_editor_absoluteX="-296dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
