@@ -20,10 +20,13 @@ public class CalculateActivity extends AppCompatActivity {
         findViewById(R.id.goal).setVisibility(View.VISIBLE);
         calculate.setVisibility(View.VISIBLE);
         final EditText goal = findViewById(R.id.goal);
+        final EditText distance = findViewById(R.id.distance);
+        final EditText time = findViewById((R.id.time));
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int goalpace = Integer.parseInt(goal.getText().toString());
+                System.out.println(goalpace);
                 Intent intent = new Intent(CalculateActivity.this, RestartActivity.class);
                 intent.putExtra("goalPace", goalpace);
                 startActivity(intent);
