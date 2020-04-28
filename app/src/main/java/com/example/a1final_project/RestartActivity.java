@@ -24,10 +24,14 @@ public class RestartActivity extends AppCompatActivity {
         double time = intent.getDoubleExtra("time", 0);
         //user pace as a double (need to convert into time)
         double userPace = time / distance;
-        String pace = String.valueOf(userPace);
-        //pace = pace.substring(0, 4) + " min/mile";
-        //TextView setpace = findViewById(R.id.avgPace);
-        //setpace.setText(pace);
+        int wholeMin = (int) userPace;
+        double sec = userPace - wholeMin;
+        double toSec = sec * 60;
+        String paceWholeMin = String.valueOf(wholeMin);
+        String paceSec = String.valueOf(toSec);
+        String toView = paceWholeMin + ":" + paceSec.substring(0, 3) + " min/mile";
+        TextView setpace = findViewById(R.id.avgPace);
+        setpace.setText(toView);
         restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
