@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".CalculateActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="359dp"
+        android:layout_height="523dp"
+        android:layout_marginTop="176dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal"
+        app:srcCompat="@drawable/bc" />
+
     <EditText
         android:id="@+id/time"
         android:layout_width="wrap_content"
@@ -16,7 +26,7 @@
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:ems="10"
-        android:hint="TIME (MIN)"
+        android:hint="TIME (MIN)(00:00)"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,21 +83,12 @@
         android:layout_marginRight="99dp"
         android:layout_marginBottom="85dp"
         android:ems="10"
-        android:hint="GOAL PACE (MIN)"
+        android:hint="GOAL PACE (MIN)(00:00)"
         android:inputType="time"
         app:layout_constraintBottom_toTopOf="@+id/distance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="GOAL PACE (MIN)" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="85dp"
-        android:layout_height="345dp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintTop_toBottomOf="@+id/distance"
-        app:srcCompat="@drawable/bc"
-        tools:layout_editor_absoluteX="319dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
