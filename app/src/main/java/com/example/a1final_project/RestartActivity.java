@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.autofill.AutofillValue;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class RestartActivity extends AppCompatActivity {
 
@@ -23,6 +24,10 @@ public class RestartActivity extends AppCompatActivity {
         double time = intent.getDoubleExtra("time", 0);
         //user pace as a double (need to convert into time)
         double userPace = time / distance;
+        String pace = String.valueOf(userPace);
+        //pace = pace.substring(0, 4) + " min/mile";
+        //TextView setpace = findViewById(R.id.avgPace);
+        //setpace.setText(pace);
         restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,6 +35,6 @@ public class RestartActivity extends AppCompatActivity {
                 finish();
             }
         });
-        //startActivity(new Intent(this, StartActivity.class));
+
     }
 }
