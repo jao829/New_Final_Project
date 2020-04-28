@@ -24,6 +24,12 @@ public class RestartActivity extends AppCompatActivity {
         double time = intent.getDoubleExtra("time", 0);
         //user pace as a double (need to convert into time)
         double userPace = time / distance;
+        //user speed as a double in miles/hour
+        double userSpeed = (distance / time) * 60;
+        String setSpeed = String.valueOf(userSpeed).substring(0, 4);
+        String viewedSpeed = setSpeed + " miles/hour";
+        TextView avgSpeed = findViewById(R.id.avgSpeed);
+        avgSpeed.setText(viewedSpeed);
         int wholeMin = (int) userPace;
         double sec = userPace - wholeMin;
         double toSec = sec * 60;
