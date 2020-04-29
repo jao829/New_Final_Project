@@ -48,6 +48,17 @@ public class CalculateActivity extends AppCompatActivity {
                         builder.create().show();
                         return;
                     }
+                    if (Integer.parseInt(goalPACE[1] ) >= 60 || Integer.parseInt(timeRan1[1]) >= 60) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(CalculateActivity.this);
+                        if (Integer.parseInt(goalPACE[1] ) >= 60) {
+                            builder.setMessage("Please enter valid entry for Time and Goal Pace: " + goalPACE[1] + " is not a valid entry for seconds");
+                            builder.create().show();
+                            return;
+                        }
+                        builder.setMessage("Please enter valid entry for Time and Goal Pace: " + timeRan1[1] + " is not a valid entry for seconds");
+                        builder.create().show();
+                        return;
+                    }
                     double goalpace = Double.parseDouble(goalPACE[0]) + (Double.parseDouble(goalPACE[1]) / 60);
                     //gets the time in minutes as a double
                     double timeRan2 = Double.parseDouble(timeRan1[0]) + (Double.parseDouble(timeRan1[1]) / 60);
