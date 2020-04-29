@@ -1,5 +1,6 @@
 package com.example.a1final_project;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -34,14 +35,19 @@ public class CalculateActivity extends AppCompatActivity {
                     String[] goalPACE = goalPace.split(":");
                     String[] timeRan1 = timeRan.split(":");
                     //gets the goalpace in minutes as a double
-                    /*
-                    if (goalpace2.length != 2 || timeRan1.length != 2) {
-                        //do something
+
+                    if (goalPACE.length != 2 || timeRan1.length != 2) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(CalculateActivity.this);
+                        builder.setMessage("Please enter valid entry for Time and Goal Pace: input must only contain 1 colon (EX: 7:00)");
+                        builder.create().show();
+                        return;
                     }
-                    if (goalpace2[0].length() != 2 || goalpace2[1].length() != 2 || timeRan1[0].length() != 2 || timeRan1[1].length() != 2) {
-                        //do something
+                    if (goalPACE[1].length() != 2 ||  timeRan1[1].length() != 2) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(CalculateActivity.this);
+                        builder.setMessage("Please enter valid entry for Time and Goal Pace: seconds must only contain 2 digits (EX: 7:00)");
+                        builder.create().show();
+                        return;
                     }
-                    */
                     double goalpace = Double.parseDouble(goalPACE[0]) + (Double.parseDouble(goalPACE[1]) / 60);
                     //gets the time in minutes as a double
                     double timeRan2 = Double.parseDouble(timeRan1[0]) + (Double.parseDouble(timeRan1[1]) / 60);
@@ -59,11 +65,12 @@ public class CalculateActivity extends AppCompatActivity {
                     }
                     finish();
 
-                } /*else {
-                    Intent intent = new Intent(CalculateActivity.this, StartActivity.this);
-                    startActivity(intent);
+                } else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(CalculateActivity.this);
+                    builder.setMessage("Please enter valid entry for Time and Goal Pace: input must contain a colon (EX: 7:00)");
+                    builder.create().show();
                 }
-                */
+
             }
         });
     }
