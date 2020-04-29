@@ -27,7 +27,7 @@ public class RestartActivity extends AppCompatActivity {
         //user speed as a double in miles/hour
         double userSpeed = (distance / time) * 60;
         String setSpeed = String.valueOf(userSpeed).substring(0, 4);
-        String viewedSpeed = setSpeed + " miles/hour";
+        String viewedSpeed = setSpeed + " mph";
         TextView avgSpeed = findViewById(R.id.avgSpeed);
         avgSpeed.setText(viewedSpeed);
         int wholeMin = (int) userPace;
