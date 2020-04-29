@@ -66,9 +66,16 @@ public class CalculateActivity extends AppCompatActivity {
                     finish();
 
                 } else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(CalculateActivity.this);
-                    builder.setMessage("Please enter valid entry for Time and Goal Pace: input must contain a colon (EX: 7:00)");
-                    builder.create().show();
+                    if (goalPace.isEmpty()|| distanceRan.isEmpty() || timeRan.isEmpty()) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(CalculateActivity.this);
+                        builder.setMessage("Please enter values for all sections");
+                        builder.create().show();
+                        return;
+                    } else {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(CalculateActivity.this);
+                        builder.setMessage("Please enter valid entry for Time and Goal Pace: input must contain a colon (EX: 7:00)");
+                        builder.create().show();
+                    }
                 }
 
             }
