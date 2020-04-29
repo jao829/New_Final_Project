@@ -33,9 +33,24 @@ public class RestartActivity extends AppCompatActivity {
         int wholeMin = (int) userPace;
         double sec = userPace - wholeMin;
         double toSec = sec * 60;
+        if (toSec < 10) {
+            String paceSec = "0" + toSec;
+            String WholeMin = String.valueOf(wholeMin);
+            String toView = WholeMin + ":" + paceSec.substring(0, 4) + " min/mile";
+            TextView setpace = findViewById(R.id.avgPace);
+            setpace.setText(toView);
+            restart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(RestartActivity.this, StartActivity.class));
+                    finish();
+                }
+            });
+            return;
+        }
         String paceWholeMin = String.valueOf(wholeMin);
         String paceSec = String.valueOf(toSec);
-        String toView = paceWholeMin + ":" + paceSec.substring(0, 3) + " min/mile";
+        String toView = paceWholeMin + ":" + paceSec.substring(0, 4) + " min/mile";
         TextView setpace = findViewById(R.id.avgPace);
         setpace.setText(toView);
         restart.setOnClickListener(new View.OnClickListener() {
