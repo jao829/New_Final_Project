@@ -19,7 +19,6 @@ public class RestartActivity extends AppCompatActivity {
         restart.setVisibility(View.VISIBLE);
         Intent intent = getIntent();
         //in minutes and miles
-        double goal = intent.getDoubleExtra("goalPace", 0);
         double distance = intent.getDoubleExtra("distance", 0);
         double time = intent.getDoubleExtra("time", 0);
         //user pace as a double (need to convert into time)
@@ -27,7 +26,7 @@ public class RestartActivity extends AppCompatActivity {
         //user speed as a double in miles/hour
         double userSpeed = (distance / time) * 60;
         String setSpeed = String.valueOf(userSpeed).substring(0, 4);
-        String viewedSpeed = setSpeed + " mph";
+        String viewedSpeed = setSpeed + " mph (average)";
         TextView avgSpeed = findViewById(R.id.avgSpeed);
         avgSpeed.setText(viewedSpeed);
         int wholeMin = (int) userPace;

@@ -8,36 +8,39 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="359dp"
-        android:layout_height="523dp"
-        android:layout_marginTop="176dp"
+        android:layout_width="644dp"
+        android:layout_height="966dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.712"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goal"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bc" />
 
     <EditText
         android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="252dp"
+        android:layout_height="46dp"
         android:layout_marginStart="99dp"
         android:layout_marginLeft="99dp"
         android:layout_marginTop="85dp"
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:ems="10"
-        android:hint="TIME (MIN)(00:00)"
+        android:hint="TIME (MIN:SEC)(00:00)"
         android:inputType="time"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/distance"
-        tools:text="TIME (MIN)"
+        tools:text="TIME (MIN:SEC)"
         tools:visibility="visible" />
 
     <EditText
         android:id="@+id/distance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="252dp"
+        android:layout_height="41dp"
         android:layout_marginStart="99dp"
         android:layout_marginLeft="99dp"
         android:layout_marginTop="85dp"
@@ -46,6 +49,8 @@
         android:ems="10"
         android:hint="DISTANCE (MILES)"
         android:inputType="numberDecimal"
+        android:textColor="#F7F7F7"
+        android:textColorHint="#FFFFFF"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,8 +79,8 @@
 
     <EditText
         android:id="@+id/goal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="262dp"
+        android:layout_height="45dp"
         android:layout_marginStart="99dp"
         android:layout_marginLeft="99dp"
         android:layout_marginTop="150dp"
@@ -83,12 +88,15 @@
         android:layout_marginRight="99dp"
         android:layout_marginBottom="85dp"
         android:ems="10"
-        android:hint="GOAL PACE (MIN)(00:00)"
+        android:hint="GOAL PACE (MIN:SEC)(00:00)"
         android:inputType="time"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/distance"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="GOAL PACE (MIN)" />
+        tools:text="GOAL PACE (MIN:SEC)" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
