@@ -77,7 +77,7 @@ public class CalculateActivity extends AppCompatActivity {
                     finish();
 
                 } else {
-                    if (goalPace.isEmpty()|| distanceRan.isEmpty() || timeRan.isEmpty()) {
+                    if (goalPace.isEmpty() || distanceRan.isEmpty() || timeRan.isEmpty()) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(CalculateActivity.this);
                         builder.setMessage("Please enter values for all sections");
                         builder.create().show();

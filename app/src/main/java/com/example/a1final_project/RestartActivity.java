@@ -25,7 +25,7 @@ public class RestartActivity extends AppCompatActivity {
         double userPace = time / distance;
         //user speed as a double in miles/hour
         double userSpeed = (distance / time) * 60;
-        String setSpeed = String.valueOf(userSpeed).substring(0, 4);
+        String setSpeed = String.valueOf(userSpeed).substring(0, 3);
         String viewedSpeed = setSpeed + " mph (average)";
         TextView avgSpeed = findViewById(R.id.avgSpeed);
         avgSpeed.setText(viewedSpeed);
@@ -35,7 +35,7 @@ public class RestartActivity extends AppCompatActivity {
         if (toSec < 10) {
             String paceSec = "0" + toSec;
             String WholeMin = String.valueOf(wholeMin);
-            String toView = WholeMin + ":" + paceSec.substring(0, 4) + " min/mile";
+            String toView = WholeMin + ":" + paceSec.substring(0, 3) + " min/mile";
             TextView setpace = findViewById(R.id.avgPace);
             setpace.setText(toView);
             restart.setOnClickListener(new View.OnClickListener() {
@@ -46,19 +46,19 @@ public class RestartActivity extends AppCompatActivity {
                 }
             });
             return;
+        } else {
+            String paceWholeMin = String.valueOf(wholeMin);
+            String paceSec = String.valueOf(toSec);
+            String toView = paceWholeMin + ":" + paceSec.substring(0, 4) + " min/mile";
+            TextView setpace = findViewById(R.id.avgPace);
+            setpace.setText(toView);
+            restart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(RestartActivity.this, StartActivity.class));
+                    finish();
+                }
+            });
         }
-        String paceWholeMin = String.valueOf(wholeMin);
-        String paceSec = String.valueOf(toSec);
-        String toView = paceWholeMin + ":" + paceSec.substring(0, 4) + " min/mile";
-        TextView setpace = findViewById(R.id.avgPace);
-        setpace.setText(toView);
-        restart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RestartActivity.this, StartActivity.class));
-                finish();
-            }
-        });
-
     }
 }
